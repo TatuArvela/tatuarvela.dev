@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark">
+  <div class="order-1 nav-item">
+    <a class="site-logo" href="{{ "/" | absolute_url }}">
+      <span>Tatu Arvela</span>
+    </a>
+  </div>
+  <button class="navbar-toggler m-2 order-2 p-2" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-pr-1">
+      <i class="fas fa-bars"></i>
+    </span>
+  </button>
+  <div class="order-3 collapse navbar-collapse" id="navbarMenu">
+    <ul class="main-nav navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.linkedin.com/in/tatuarvela/">
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/TatuArvela">
+          <span>GitHub</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.behance.net/TatuArvela">
+          <span>Bēhance</span>
+        </a>
+      </li>
+      <li class="nav-item {% if page.category == 'contact' %} active {% endif %}">
+        <a class="nav-link" href="{{ "/contact/" | absolute_url }}">
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

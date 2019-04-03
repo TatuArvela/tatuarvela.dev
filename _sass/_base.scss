@@ -1,0 +1,75 @@
+/* 
+
+  Base theme extensions
+*/
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background: white;
+}
+
+.jumbotron {
+  padding: 3rem 1rem;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 18px;
+  }
+  .jumbotron {
+    padding: 5rem;
+  }
+  .front-page-title {
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .front-page-title {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+.lead {
+  font-size: 1.6rem;
+}
+
+.highlighter-rouge {
+  @extend .p-1;
+  margin-bottom: 2rem;
+  background: gray("200");
+  .highlight {
+    margin: 0px;
+  }
+}
+
+.whitespace-normal {
+  white-space: normal;
+}
+
+.spotify {
+  height: 80px;
+}
+
+.post img {
+  object-fit: contain;
+}
+
+.img-thumbnail {
+  padding: 0;
+}
+
+.gallery-picture {
+  max-height: 600px;
+}
+
+// .bg-corner-tear {
+//   background: linear-gradient(45deg, #0460d9 95%, white 95%);
+// }

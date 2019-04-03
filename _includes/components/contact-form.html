@@ -1,0 +1,25 @@
+<form class="card bg-transparent px-4 pb-5 pt-0 pt-md-5 border-0" id="formspree" method="POST">
+  <div class="card-body">
+    <h2><i class="fas fa-envelope mr-3"></i> Send me email</h2>
+    <div class="form-group">
+      <label for="name">Your name</label>
+      <input class="form-control" type="text" name="name" id="name" required/>
+    </div>
+    <div class="form-group">
+      <label for="email">Your email address</label>
+      <input class="form-control" type="text" name="email" id="email" required/>
+    </div>
+    <div class="form-group">
+      <label for="message">Your message to me</label>
+      <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+    </div>
+    <input class="btn btn-success px-5 font-weight-bold" type="submit" value="Send" />
+  </div>
+</form>
+<script>
+window.onload = function () {
+  var address = atob('dGF0dS5hcnZlbGFAZ21haWwuY29t');
+  var formspree = document.getElementById('formspree');
+  formspree.action = 'https://formspree.io/' + address;
+}
+</script>
