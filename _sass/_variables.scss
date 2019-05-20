@@ -1,40 +1,13 @@
 // Color palette
 
-$blue:        #0460d9;
-//$indigo:      #304FFE;
-//$purple:      #6200EA;
-//$pink:        #C51162;
-$red:         #f24b4b;
-//$orange:      #FF6D00;
-//$yellow:      #FFD600;
-$green:       #00C853;
-//$teal:        #00BFA5;
-$cyan:        #00B8D4;
-
-$dark-blue:   #0d2858;
-$gray:        #263238;
-
+$gray:        #696969;
 $light:       #f6f6f6;
-$dark:        #0b0c10;
+$dark:        #505050;
 
 $theme-colors: (
-  "primary":      $blue,
-  "secondary":    $dark-blue,
-
-  "blue":         $blue,
-//  "indigo":       $indigo,
-//  "purple":       $purple,
-//  "pink":         $pink,
-  "red":          $red,
-//  "orange":       $orange,
-//  "yellow":       $yellow,
-  "green":        $green,
-//  "teal":         $teal,
-  "cyan":         $cyan,
-
-  "dark-blue":    $dark-blue,
+  "primary":      $gray,
+  "secondary":    $dark,
   "gray":         $gray,
-
   "light":        $light,
   "dark":         $dark,
 );
