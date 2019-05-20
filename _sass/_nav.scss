@@ -27,7 +27,7 @@ header {
     &:after {
       content: '';
       display: block;
-      border-bottom: 2px solid theme-color("light");
+      border-bottom: 2px solid theme-color("primary");
       width: 0;
       position: absolute;
       left: 0;
@@ -57,7 +57,7 @@ header {
       @extend .py-md-4;
       @extend .px-3;
       opacity: 0.8;
-      color: theme-color("light") !important;
+      color: theme-color("primary") !important;
       span {
         position: relative;
         i {
@@ -66,7 +66,7 @@ header {
         &:after {
           content: '';
           display: block;
-          border-bottom: 2px solid theme-color("light");
+          border-bottom: 2px solid theme-color("primary");
           width: 0;
           position: absolute;
           left: 0;
