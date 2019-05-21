@@ -1,13 +1,19 @@
----
-layout: base
----
-<div class="row mx-0 index-image py-5">
-  <div class="offset-md-2 col-md-8 py-md-5">
-    <div class="pt-md-5 text-dark">
-      <h1 class="font-weight-bold mb-1 text-center front-page-title">{{page.title}}</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <div class="page">
+    {% include header.html %}
+    <div class="content-container anim-fade-in anim-delay-1">
+      <h1 class="title">{{page.title}}</h1>
+      <div class="content">
+        {{content}}
+      </div>
     </div>
-    <div class="py-5 text-center lead">
-      {{content}}
-    </div>
+    {% include footer.html %}
   </div>
-</div>
+  {% include contact.html %}
+</body>
+</html>

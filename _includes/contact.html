@@ -1,0 +1,24 @@
+<div class="contact" id="contact">
+  <form id="formspree" method="POST">
+    <a class="close" href="#">&times;</a>
+    <h2>Contact me</h2>
+
+    <label for="name">Your name</label>
+    <input type="text" name="name" id="name" required/>
+
+    <label for="email">Your email address</label>
+    <input type="text" name="email" id="email" required/>
+
+    <label for="message">Your message to me</label>
+    <textarea name="message" id="message" rows="8" required></textarea>
+
+    <input class="button" type="submit" value="Send" />
+  </form>
+</div>
+<script>
+window.onload = function () {
+  var address = atob('dGF0dS5hcnZlbGFAZ21haWwuY29t');
+  var formspree = document.getElementById('formspree');
+  formspree.action = 'https://formspree.io/' + address;
+}
+</script>
