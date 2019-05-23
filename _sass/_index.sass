@@ -1,5 +1,5 @@
 .page
-  padding: 3rem 
+  padding: 3rem 2rem
   display: flex
   flex-direction: column
   min-height: 100vh
@@ -43,6 +43,33 @@ footer
   @extend .btn
   @extend .btn-primary
 
-a:focus
-  outline: none
-  text-decoration: underline
+$link-bg:     $primary
+$link-color:  $body-bg
+
+a
+  padding: 0.2em
+  color: $link-color
+  background-color: $link-bg
+  span
+    position: relative
+    &:after
+      content: ''
+      display: block
+      border-bottom: 0.1em solid $link-color
+      width: 0
+      position: absolute
+      left: 0
+      bottom: 0.1em
+      transition: 0.2s ease
+  &:hover,
+  &:focus
+    color: $link-color
+    outline: none
+    text-decoration: none
+    transition: all 0.2s
+    outline: none
+    span:after
+      width: 100%
+
+p a
+  padding: 0.2rem
