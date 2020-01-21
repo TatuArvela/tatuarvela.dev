@@ -1,9 +1,16 @@
+body
+  background: $body-bg
+  color: $body-color
+  margin: 0
+
 .page
   padding: 3rem 2rem
   display: flex
   flex-direction: column
-  min-height: 100vh
+  min-height: calc(100vh - 6rem)
   overflow: hidden
+  @media screen and (max-width: $breakpoint-tiny)
+    padding: 3rem 1rem
 
 .content-container
   flex-grow: 1
@@ -13,45 +20,37 @@
   justify-content: center
 
 .title
-  padding: 3rem 0
-  margin-bottom: 0.5rem
+  margin: 2rem 0
   text-align: center
-  font-size: 4rem
+  font-size: 6rem
   font-weight: bold
-  line-height: 0.8em
-  transition: all 0.3s
-  white-space: nowrap
+  line-height: 1.2em
   margin-left: -100%
   margin-right: -100%
-  @media screen and (min-width: $breakpoint)
-    font-size: 6rem
-  .title__ampersand
-    font-weight: normal
-  .title__second-line
-    font-size: 0.6em
+  transition: all 0.3s
+  @media screen and (max-width: $breakpoint)
+    font-size: 4rem
+  @media screen and (max-width: $breakpoint-tiny)
+    font-size: 3rem
 
 .content
-  padding: 0 3rem
   text-align: center
   font-size: 1.25rem
-  font-weight: 300
+  line-height: 1.8em
 
 footer
   color: dark
   text-align: center
-  padding: 3rem
 
-.button
-  @extend .btn
-  @extend .btn-primary
-
-$link-bg:     $primary
-$link-color:  $body-bg
+$link-bg:     transparent
+$link-color:  $primary
 
 a
+  background: $link-bg
   padding: 0.2em
   color: $link-color
-  background-color: $link-bg
+  text-transform: uppercase
+  text-decoration: none
   span
     position: relative
     &:after
@@ -61,7 +60,7 @@ a
       width: 0
       position: absolute
       left: 0
-      bottom: 0.1em
+      bottom: 0
       transition: 0.2s ease
   &:hover,
   &:focus

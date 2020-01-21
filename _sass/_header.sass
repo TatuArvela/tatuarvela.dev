@@ -1,6 +1,7 @@
 header
   padding: 3rem
   margin: 0
+  margin-bottom: 3rem
   padding: 0
   z-index: 110
   flex-flow: row nowrap
@@ -9,19 +10,22 @@ header
   align-items: center
 
 .site-logo
-  flex-grow: 1
+  display: block
+  line-height: 3rem
   transition: all 0.2s
-  @media screen and (min-width: $breakpoint)
-    padding-left: 1.5rem
-  a
-    font-size: 2rem
-    font-weight: bold !important
-    letter-spacing: 0.075em
+  margin-left: 1rem
+  font-size: 2rem
+  flex-grow: 1
+  padding-left: 1.5rem
+  @media screen and (max-width: $breakpoint)
+    padding-left: 0
+  @media screen and (max-width: $breakpoint-tiny)
+    margin-left: 0
 
 nav ul
   display: flex
   padding-left: 0
-  margin-bottom: 0
+  margin: 0
   list-style: none
   font-size: 1.25rem
 
@@ -48,10 +52,10 @@ nav.mobile-nav
   display: flex
   flex-direction: column
   height: 0
-  margin: 0 -3.5rem
-  margin-top: 3rem
-  padding: 0
-  box-shadow: inset 0 0 10px rgba($black, 0.25)
+  margin-top: 0
+  opacity: 0
+  pointer-events: none
+  box-shadow: inset 0 0 10px rgba($body-color, 0.25)
   transition: all 0.5s
   overflow: hidden
   ul
@@ -59,21 +63,21 @@ nav.mobile-nav
     transition: all 0.5s
     pointer-events: none
     li
-      text-align: right
+      align-self: end
       margin: 0 2rem
       padding: 1.5rem 2.5rem
       line-height: 0
       transition: all 0.5s
       display: block
       flex-grow: 1
-  @media screen and (min-width: $breakpoint)
-    height: 0 !important
-    margin-top: 0 !important
-    opacity: 0
-    pointer-events: none
+  @media screen and (max-width: $breakpoint)
+    height: 0
+    margin: 0 -3.5rem
+    padding: 0
+    opacity: 1
 
 #menu:target nav.mobile-nav
-  height: calc(192px + 4rem)
+  height: calc(130px + 4rem)
   padding: 2rem 0
   .menu-toggle.on
     display: none
@@ -83,24 +87,26 @@ nav.mobile-nav
     pointer-events: auto
 
 .menu-toggle
-  display: block
+  display: none
+  opacity: 0
+  pointer-events: none
   top: 3rem
   right: 2rem
   position: absolute
   border: none
   font-size: 2rem
-  line-height: 2.25rem
-  width: 3rem
-  height: 3rem
-  opacity: 1
+  line-height: 2rem
+  width: 2rem
+  height: 2rem
   transition: all 0.5s
-  pointer-events: auto
   cursor: pointer
   text-align: center
   z-index: 300
-  @media screen and (min-width: $breakpoint)
-    display: none
-    opacity: 0
-    pointer-events: none
+  @media screen and (max-width: $breakpoint)
+    display: block
+    opacity: 1
+    pointer-events: auto
+  @media screen and (max-width: $breakpoint-tiny)
+    right: 1rem
   &.off
     display: none
