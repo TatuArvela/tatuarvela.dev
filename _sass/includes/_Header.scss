@@ -1,0 +1,32 @@
+/** @define Header */
+
+.Header {
+  @extend .anim-fade-in;
+
+  margin: 0;
+  margin-bottom: 3rem;
+  padding: 0;
+  z-index: 110;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.Header__logo {
+  display: block;
+  line-height: 3rem;
+  transition: all 0.2s;
+  margin-left: 1rem;
+  font-size: 2rem;
+  flex-grow: 1;
+  padding-left: 1.5rem;
+
+  @media screen and (max-width: $breakpoint) {
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: $breakpoint-tiny) {
+    margin-left: 0;
+  }
+}

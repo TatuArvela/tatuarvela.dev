@@ -1,0 +1,37 @@
+/** @define Container */
+
+.Container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.Container__title {
+  @extend .anim-fade-in-and-condense;
+  @extend .anim-delay-1;
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-left: -100%;
+  margin-right: -100%;
+  transition: all 0.3s;
+  @media screen and (max-width: $breakpoint) {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: $breakpoint-tiny) {
+    font-size: 3rem;
+  }
+}
+
+.Container__content {
+  @extend .anim-fade-in;
+  @extend .anim-delay-1;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.8em;
+  margin-bottom: 3rem;
+}

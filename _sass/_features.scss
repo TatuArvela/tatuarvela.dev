@@ -1,0 +1,15 @@
+#menu:target {
+  .Navigation--mobile {
+    @extend .Navigation--mobile--toggled;
+  }
+  .MenuToggle--on {
+    @extend .MenuToggle--on--toggled;
+  }
+  .MenuToggle--off {
+    @extend .MenuToggle--off--toggled;
+  }
+}
+
+#contact:target {
+  @extend .ContactForm--toggled;
+}

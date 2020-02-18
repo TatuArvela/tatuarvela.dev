@@ -1,0 +1,35 @@
+/** @define Link */
+
+.Link {
+  background: $link-bg;
+  padding: 0.2em;
+  color: $link-color;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  .Link__content {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      border-bottom: 0.1em solid $link-color;
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: 0.2s ease;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    .Link__content:after {
+      width: 100%;
+    }
+  }
+}

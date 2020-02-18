@@ -1,0 +1,46 @@
+/** @define MenuToggle */
+
+.MenuToggle {
+  @extend .Link;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  top: 3rem;
+  right: 2rem;
+  position: absolute;
+  border: none;
+  font-size: 2rem;
+  line-height: 2rem;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-align: center;
+  z-index: 300;
+
+  @media screen and (max-width: $breakpoint) {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @media screen and (max-width: $breakpoint-tiny) {
+    right: 1rem;
+  }
+
+  &--off {
+    display: none;
+  }
+}
+
+.MenuToggle--on--toggled {
+  @media screen and (max-width: $breakpoint) {
+    display: none;
+  }
+}
+
+.MenuToggle--off--toggled {
+  @media screen and (max-width: $breakpoint) {
+    display: block;
+  }
+}

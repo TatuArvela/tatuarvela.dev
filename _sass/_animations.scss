@@ -1,0 +1,51 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anim-fade-in {
+  opacity: 0;
+  animation: fade-in ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+}
+
+@keyframes fade-in-and-condense {
+  from {
+    opacity: 0;
+    letter-spacing: 0.05em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+.anim-fade-in-and-condense {
+  opacity: 0;
+  animation: fade-in-and-condense;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+}
+
+.anim-delay-1 {
+  animation-delay: 0.1s;
+  z-index: 90;
+}
+
+.anim-delay-2 {
+  animation-delay: 0.2s;
+  z-index: 80;
+}
+
+.anim-delay-3 {
+  animation-delay: 0.3s;
+  z-index: 70;
+}
+
+.anim-delay-4 {
+  animation-delay: 0.4s;
+  z-index: 60;
+}
