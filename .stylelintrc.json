@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "stylelint-prettier",
+    "stylelint-scss",
+    "stylelint-selector-bem-pattern"
+  ],
+  "extends": [
+    "stylelint-config-recommended-scss"
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "plugin/selector-bem-pattern": {
+      "preset": "bem"
+    }
+  }
+}
