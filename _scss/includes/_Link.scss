@@ -2,7 +2,8 @@
 
 .Link {
   background: $link-bg;
-  padding: 0.2em;
+  margin-right: -0.2em;
+  display: inline-block;
   color: $link-color;
   text-transform: uppercase;
   text-decoration: none;
