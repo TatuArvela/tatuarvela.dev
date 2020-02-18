@@ -1,18 +1,14 @@
 title: Tatu Arvela
 email: contact@tatuarvela.com
-description: >-
-  Developer from Finland.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '/' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
 defaults:
   - scope:
-      path:                 "*"
+      path: '*'
     values:
-      show_content_header:  true
+      show_content_header: true
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
