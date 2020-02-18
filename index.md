@@ -1,7 +1,6 @@
 ---
-layout: index
+layout: default
 title: developer. designer.
-frontpage: true
 ---
 Consultant at {% include Link.html text="Wunderdog" url="https://wunder.dog/" %}, graduated from {% include Link.html text="Haaga-Helia" url="https://www.haaga-helia.fi/" %}.
 
