@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-  {% include head.html %}
-</head>
-<body>
-  <div class="page" id="menu">
-    {% include header.html %}
-    <div class="content-container">
-      <h1 class="title anim-fade-in-and-condense anim-delay-1">developer.<br/>designer.</h1>
-      <div class="content anim-fade-in anim-delay-1">
-        {{content}}
-      </div>
-    </div>
-    {% include footer.html %}
-  </div>
-  {% include contact.html %}
-</body>
+  {% include Head.html %}
+  <body>
+    {% include Page.html %} {% include ContactForm.html %}
+  </body>
 </html>

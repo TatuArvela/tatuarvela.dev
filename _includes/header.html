@@ -1,53 +1,5 @@
-<header class="anim-fade-in">
-  <div class="site-logo">{{site.title}}</div>
-  <nav class="main-nav">
-    <ul>
-      <li>
-        <a href="https://www.linkedin.com/in/tatuarvela/">
-          <span>LinkedIn</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/TatuArvela">
-          <span>GitHub</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.behance.net/TatuArvela">
-          <span>Bēhance</span>
-        </a>
-      </li>
-      <li>
-        <a href="#contact">
-          <span>Contact</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+<header class="Header">
+  <div class="Header__logo">{{site.title}}</div>
+  {% include Navigation.html %}
 </header>
-<nav class="mobile-nav">
-  <a class="menu-toggle on" href="#menu"><span>☰</span></a>
-  <a class="menu-toggle off" href="#"><span>☰</span></a>
-  <ul>
-    <li>
-      <a href="https://www.linkedin.com/in/tatuarvela/">
-        <span>LinkedIn</span>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/TatuArvela">
-        <span>GitHub</span>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.behance.net/TatuArvela">
-        <span>Bēhance</span>
-      </a>
-    </li>
-    <li>
-      <a href="#contact">
-        <span>Contact</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+{% include Navigation.html mobile=true %}
