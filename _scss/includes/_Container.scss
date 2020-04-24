@@ -1,22 +1,23 @@
 /** @define Container */
 
 .Container {
+  width: 100%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 
 .Container__title {
   @extend .anim-fade-in-and-condense;
   @extend .anim-delay-1;
-  margin: 2rem 0;
-  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 40rem;
   font-size: 6rem;
   font-weight: bold;
   line-height: 1.2em;
-  transition: all 0.3s;
+  transition: font-size 0.5s;
   @media screen and (max-width: $breakpoint) {
     font-size: 4rem;
   }
@@ -28,8 +29,8 @@
 .Container__content {
   @extend .anim-fade-in;
   @extend .anim-delay-1;
-  text-align: center;
   font-size: 1.25rem;
   line-height: 1.8em;
   margin-bottom: 3rem;
+  max-width: 40rem;
 }

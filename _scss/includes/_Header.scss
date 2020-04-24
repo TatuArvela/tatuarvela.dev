@@ -6,27 +6,23 @@
   margin: 0;
   margin-bottom: 3rem;
   padding: 0;
-  z-index: 110;
   flex-flow: row nowrap;
   justify-content: flex-start;
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
 .Header__logo {
   display: block;
   line-height: 3rem;
-  transition: all 0.2s;
-  margin-left: 1rem;
   font-size: 2rem;
   flex-grow: 1;
-  padding-left: 1.5rem;
+  transform: translateX(2rem);
+  transition: transform 0.5s;
 
   @media screen and (max-width: $breakpoint) {
-    padding-left: 0;
-  }
-
-  @media screen and (max-width: $breakpoint-tiny) {
+    transform: translateX(0rem);
     margin-left: 0;
   }
 }

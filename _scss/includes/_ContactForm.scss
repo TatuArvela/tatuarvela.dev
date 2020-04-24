@@ -1,32 +1,34 @@
 /** @define ContactForm */
 
 .ContactForm {
-  position: fixed;
-  top: 0;
-  right: 0;
+  align-items: center;
   bottom: 0;
+  display: flex;
+  justify-content: center;
   left: 0;
-  z-index: 999;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s;
+  will-change: opacity;
+  z-index: 3;
 }
 
 .ContactForm__form {
-  color: $primary;
-  background-color: $white;
   background-clip: border-box;
+  background-color: $white;
   box-shadow: 0 0 10px rgba($primary, 0.25);
-  width: calc(100vw - 3rem - 40px);
-  max-width: 420px;
+  color: $primary;
   max-height: 594px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.2);
-  padding: 2em;
+  max-width: 420px;
   opacity: 0;
-  transition: all 0.3s;
+  padding: 2em;
+  transform: scale(1.2);
+  transition: opacity 0.3s, transform 0.3s;
+  will-change: opacity, transform;
+  width: calc(100vw - 3rem - 40px);
 }
 
 .ContactForm__label {
@@ -35,48 +37,53 @@
 }
 
 .ContactForm__text-field {
-  display: block;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: $primary;
-  background-color: $white;
   background-clip: padding-box;
-  border: $border-width solid $border-color;
+  background-color: $white;
   border-radius: 0;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  margin-bottom: 1rem;
+  border: $border-width solid $border-color;
+  color: $primary;
+  display: block;
+  font-size: 1rem;
   height: auto;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  padding: 0.375rem 0.75rem;
   resize: none;
+  transition: border 0.2s;
+
+  &:focus {
+    border: $border-width solid $body-background-color;
+    outline: none;
+  }
 }
 
 .ContactForm__submit {
-  border: none;
-  font-size: 1.2rem;
-  font-family: inherit;
-  padding: 1rem;
-  cursor: pointer;
-  width: auto;
   align-self: flex-end;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: auto;
 }
 
 .ContactForm__submit-text {
   position: relative;
-  text-transform: uppercase;
 }
 
 .ContactForm__close {
+  border: 0;
   display: none;
-  width: 4em;
+  font-weight: bold;
   height: 2em;
   line-height: 2em;
+  padding: 0;
   position: absolute;
   right: 0;
-  top: 0;
-  font-weight: bold;
   text-align: center;
-  padding: 0;
-  border: 0;
+  text-decoration: none;
+  top: 0;
+  width: 4em;
 }
 
 .ContactForm__close,
@@ -84,41 +91,23 @@
   background: $primary;
   color: $white;
 
-  &-text {
-    &:after {
-      content: '';
-      display: block;
-      border-bottom: 0.1em solid $white;
-      width: 0;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      transition: 0.2s ease;
-    }
-  }
-
   &:hover,
   &:focus {
-    color: $white;
+    background: $body-background-color;
     outline: none;
     text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  &:hover &-text:after,
-  &:focus &-text:after {
-    width: 100%;
+    transition: background-color 0.2s;
   }
 }
 
 .ContactForm--toggled {
+  background: rgba(0, 0, 0, 0.25);
   opacity: 1;
   pointer-events: auto;
-  background: rgba(0, 0, 0, 0.25);
 
   .ContactForm__form {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
     display: flex;
     flex-direction: column;
   }

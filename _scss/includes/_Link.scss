@@ -18,7 +18,8 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      transition: 0.2s ease;
+      transition: width 0.2s ease;
+      will-change: width;
     }
   }
 
@@ -27,7 +28,6 @@
     color: $link-color;
     outline: none;
     text-decoration: none;
-    transition: all 0.2s;
 
     .Link__content:after {
       width: 100%;
