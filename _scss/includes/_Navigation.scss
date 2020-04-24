@@ -28,7 +28,7 @@
   box-shadow: inset 0 0 10px rgba($primary, 0.25);
   transition: opacity 0.5s, height 0.5s, padding 0.5s;
   will-change: opacity, height, padding;
-  overflow: hidden;
+  overflow: visible;
 
   @media screen and (max-width: $breakpoint) {
     opacity: 1;
@@ -41,6 +41,7 @@
   margin: 0;
   list-style: none;
   font-size: 1.25rem;
+  overflow: hidden;
 }
 
 .Navigation .Navigation__list {
