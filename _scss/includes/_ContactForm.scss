@@ -1,19 +1,26 @@
 /** @define ContactForm */
 
+@keyframes eliminate-fade {
+  to {
+    transform: translateX(0);
+  }
+}
+
 .ContactForm {
   align-items: center;
   bottom: 0;
   display: flex;
   justify-content: center;
   left: 0;
-  opacity: 0;
   pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
-  transition: opacity 0.3s;
-  will-change: opacity;
   z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: translateX(-9999px);
+  animation: eliminate-fade 0.8s 1 forwards;
 }
 
 .ContactForm__form {
@@ -23,11 +30,10 @@
   color: $primary;
   max-height: 594px;
   max-width: 420px;
-  opacity: 0;
-  padding: 2em;
+  padding: 4rem 2rem;
   transform: scale(1.2);
-  transition: opacity 0.3s, transform 0.3s;
-  will-change: opacity, transform;
+  transition: transform 0.3s;
+  will-change: transform;
   width: calc(100vw - 3rem - 40px);
 }
 
@@ -106,7 +112,6 @@
   pointer-events: auto;
 
   .ContactForm__form {
-    opacity: 1;
     transform: scale(1);
     display: flex;
     flex-direction: column;
