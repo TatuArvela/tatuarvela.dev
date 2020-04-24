@@ -13,9 +13,9 @@
 }
 
 .ContactForm__form {
-  background-color: $body-bg;
+  background-color: $white;
   background-clip: border-box;
-  box-shadow: 0 0 10px rgba($body-color, 0.25);
+  box-shadow: 0 0 10px rgba($primary, 0.25);
   width: calc(100vw - 3rem - 40px);
   max-width: 420px;
   max-height: 594px;
@@ -38,8 +38,8 @@
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: $body-color;
-  background-color: $body-bg;
+  color: $primary;
+  background-color: $white;
   background-clip: padding-box;
   border: $border-width solid $border-color;
   border-radius: 0;
@@ -81,13 +81,13 @@
 .ContactForm__close,
 .ContactForm__submit {
   background: $primary;
-  color: $body-bg;
+  color: $white;
 
   &-text {
     &:after {
       content: '';
       display: block;
-      border-bottom: 0.1em solid $body-bg;
+      border-bottom: 0.1em solid $white;
       width: 0;
       position: absolute;
       left: 0;
@@ -98,7 +98,7 @@
 
   &:hover,
   &:focus {
-    color: $body-bg;
+    color: $white;
     outline: none;
     text-decoration: none;
     transition: all 0.2s;
