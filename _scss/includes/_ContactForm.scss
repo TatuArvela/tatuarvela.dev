@@ -6,41 +6,89 @@
   }
 }
 
+$form-height: 594px;
+
 .ContactForm {
   align-items: center;
+  animation: eliminate-fade 0s 0.3s 1 forwards;
   backdrop-filter: blur(1rem);
   bottom: 0;
-  display: flex;
-  justify-content: center;
+  display: block;
   left: 0;
+  opacity: 0;
+  overflow-y: auto;
   pointer-events: none;
   position: fixed;
   right: 0;
+  text-align: center;
   top: 0;
-  z-index: 3;
-  opacity: 0;
   transition: opacity 0.3s;
   visibility: hidden;
-  animation: eliminate-fade 0s 0.3s 1 forwards;
+  z-index: 3;
+
+  @media screen and (min-height: $form-height) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 }
+
+$dog-ear-size: 4rem;
 
 .ContactForm__form {
   background-color: $white;
   box-shadow: 0 0 10px rgba($primary, 0.25);
   box-sizing: border-box;
+  clip-path: polygon(
+    0 0,
+    calc(100% - #{$dog-ear-size}) 0,
+    100% $dog-ear-size,
+    100% 100%,
+    0 100%
+  );
   color: $primary;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  height: 98vh;
   justify-content: space-between;
-  max-height: 594px;
+  margin: 0.5rem;
+  max-height: $form-height;
   max-width: 420px;
-  overflow: auto;
   padding: 4rem 2rem;
+  position: relative;
+  text-align: left;
   transform: scale(1.2);
   transition: transform 0.3s;
   width: 98vw;
   will-change: transform;
+}
+
+.ContactForm__close {
+  background: $white;
+  border: 0;
+  box-shadow: 0 3px 5px rgba(#000, 0.25);
+  box-sizing: border-box;
+  display: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: $dog-ear-size;
+  line-height: 5rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  text-decoration: none;
+  top: 0;
+  transition: background-color 0.2s, color 0.2s;
+  width: $dog-ear-size;
+
+  &:hover,
+  &:focus {
+    background: $body-background-color;
+    color: $white;
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 .ContactForm__label {
@@ -56,8 +104,8 @@
 .ContactForm__text-area {
   background-clip: padding-box;
   background-color: transparent;
-  border-radius: 0;
   border: $border-width solid $border-color;
+  border-radius: 0;
   color: $primary;
   display: block;
   font-size: 1rem;
@@ -76,45 +124,26 @@
 
 .ContactForm__submit {
   align-self: flex-end;
+  background: $primary;
   border: none;
+  color: $white;
   cursor: pointer;
   font-family: inherit;
   font-size: 1.2rem;
   padding: 1rem;
+  transition: background-color 0.2s;
   width: auto;
-}
-
-.ContactForm__submit-text {
-  position: relative;
-}
-
-.ContactForm__close {
-  border: 0;
-  display: none;
-  font-weight: bold;
-  height: 2em;
-  line-height: 2em;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  width: 4em;
-}
-
-.ContactForm__close,
-.ContactForm__submit {
-  background: $primary;
-  color: $white;
 
   &:hover,
   &:focus {
     background: $body-background-color;
     outline: none;
     text-decoration: none;
-    transition: background-color 0.2s;
   }
+}
+
+.ContactForm__submit-text {
+  position: relative;
 }
 
 .ContactForm--toggled {
@@ -124,8 +153,6 @@
 
   .ContactForm__form {
     transform: scale(1);
-    display: flex;
-    flex-direction: column;
   }
 
   .ContactForm__close {
