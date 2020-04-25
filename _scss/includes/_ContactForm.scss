@@ -8,6 +8,7 @@
 
 .ContactForm {
   align-items: center;
+  backdrop-filter: blur(1rem);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -24,8 +25,7 @@
 }
 
 .ContactForm__form {
-  backdrop-filter: blur(3px);
-  background-color: rgba($white, 0.8);
+  background-color: $white;
   box-shadow: 0 0 10px rgba($primary, 0.25);
   box-sizing: border-box;
   color: $primary;
