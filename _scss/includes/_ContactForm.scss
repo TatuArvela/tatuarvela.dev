@@ -2,7 +2,7 @@
 
 @keyframes eliminate-fade {
   to {
-    transform: translateX(0);
+    visibility: visible;
   }
 }
 
@@ -19,22 +19,28 @@
   z-index: 3;
   opacity: 0;
   transition: opacity 0.3s;
-  transform: translateX(-9999px);
-  animation: eliminate-fade 0.8s 1 forwards;
+  visibility: hidden;
+  animation: eliminate-fade 0s 0.3s 1 forwards;
 }
 
 .ContactForm__form {
-  background-clip: border-box;
-  background-color: $white;
+  backdrop-filter: blur(3px);
+  background-color: rgba($white, 0.8);
   box-shadow: 0 0 10px rgba($primary, 0.25);
+  box-sizing: border-box;
   color: $primary;
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+  justify-content: space-between;
   max-height: 594px;
   max-width: 420px;
+  overflow: auto;
   padding: 4rem 2rem;
   transform: scale(1.2);
   transition: transform 0.3s;
+  width: 98vw;
   will-change: transform;
-  width: calc(100vw - 3rem - 40px);
 }
 
 .ContactForm__label {
@@ -42,9 +48,14 @@
   margin-bottom: 0.5rem;
 }
 
-.ContactForm__text-field {
+.ContactForm__text-area {
+  min-height: 6rem;
+}
+
+.ContactForm__text-field,
+.ContactForm__text-area {
   background-clip: padding-box;
-  background-color: $white;
+  background-color: transparent;
   border-radius: 0;
   border: $border-width solid $border-color;
   color: $primary;
