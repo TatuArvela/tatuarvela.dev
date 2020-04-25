@@ -12,15 +12,18 @@
 .Container__title {
   @extend .anim-fade-in-and-condense;
   @extend .anim-delay-1;
+
   margin: 2rem 0;
   max-width: 40rem;
   font-size: 6rem;
   font-weight: bold;
   line-height: 1.2em;
   transition: font-size 0.5s;
+
   @media screen and (max-width: $breakpoint) {
     font-size: 4rem;
   }
+
   @media screen and (max-width: $breakpoint-tiny) {
     font-size: 3rem;
   }
@@ -29,6 +32,7 @@
 .Container__content {
   @extend .anim-fade-in;
   @extend .anim-delay-1;
+
   font-size: 1.25rem;
   line-height: 1.8em;
   margin-bottom: 3rem;

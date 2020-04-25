@@ -22,7 +22,7 @@
   transition: transform 0.5s;
 
   @media screen and (max-width: $breakpoint) {
-    transform: translateX(0rem);
+    transform: translateX(0);
     margin-left: 0;
   }
 }

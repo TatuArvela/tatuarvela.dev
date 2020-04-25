@@ -8,11 +8,11 @@
   opacity: 0;
   will-change: opacity;
   pointer-events: none;
-  transform: translateX(2rem);
+  transform: translateX(5rem);
   transition: opacity 0.5s, transform 0.5s;
 
   @media screen and (min-width: $breakpoint + 1) {
-    transform: translateX(0rem);
+    transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
   }

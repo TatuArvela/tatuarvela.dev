@@ -9,7 +9,8 @@
 
   .Link__content {
     position: relative;
-    &:after {
+
+    &::after {
       content: '';
       display: block;
       border-bottom: 0.1em solid $link-color;
@@ -28,7 +29,7 @@
     outline: none;
     text-decoration: none;
 
-    .Link__content:after {
+    .Link__content::after {
       width: 100%;
     }
   }
