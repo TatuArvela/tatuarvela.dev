@@ -1,11 +1,11 @@
 /** @define Page */
 
 .Page {
-  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 6rem);
   overflow: hidden;
+  padding: 3rem 2rem;
 
   @media screen and (max-width: $breakpoint-tiny) {
     padding: 3rem 1rem;

@@ -2,23 +2,23 @@
 
 .Link {
   background: $link-bg;
-  display: inline-block;
   color: $link-color;
-  text-transform: uppercase;
+  display: inline-block;
   text-decoration: none;
+  text-transform: uppercase;
 
   .Link__content {
     position: relative;
 
     &::after {
+      border-bottom: 0.1em solid $link-color;
+      bottom: 0;
       content: '';
       display: block;
-      border-bottom: 0.1em solid $link-color;
-      width: 0;
-      position: absolute;
       left: 0;
-      bottom: 0;
+      position: absolute;
       transition: width 0.2s ease;
+      width: 0;
       will-change: width;
     }
   }

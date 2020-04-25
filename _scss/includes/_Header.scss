@@ -3,26 +3,26 @@
 .Header {
   @extend .anim-fade-in;
 
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
   margin: 0;
   margin-bottom: 3rem;
   padding: 0;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  display: flex;
-  align-items: center;
   pointer-events: none;
 }
 
 .Header__logo {
   display: block;
-  line-height: 3rem;
-  font-size: 2rem;
   flex-grow: 1;
+  font-size: 2rem;
+  line-height: 3rem;
   transform: translateX(2rem);
   transition: transform 0.5s;
 
   @media screen and (max-width: $breakpoint) {
-    transform: translateX(0);
     margin-left: 0;
+    transform: translateX(0);
   }
 }

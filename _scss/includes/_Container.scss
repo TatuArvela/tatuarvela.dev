@@ -1,23 +1,23 @@
 /** @define Container */
 
 .Container {
-  width: 100%;
-  flex-grow: 1;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-grow: 1;
   justify-content: center;
+  width: 100%;
 }
 
 .Container__title {
   @extend .anim-fade-in-and-condense;
   @extend .anim-delay-1;
 
-  margin: 2rem 0;
-  max-width: 40rem;
   font-size: 6rem;
   font-weight: bold;
   line-height: 1.2em;
+  margin: 2rem 0;
+  max-width: 40rem;
   transition: font-size 0.5s;
   word-spacing: 100vw;
 

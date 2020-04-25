@@ -3,19 +3,19 @@
 .MenuToggle {
   @extend .Link;
 
+  border: none;
+  cursor: pointer;
   display: none;
+  font-size: 2rem;
+  height: 2rem;
+  line-height: 2rem;
   opacity: 0;
   pointer-events: none;
-  top: 3.5rem;
-  right: 2.25rem;
   position: absolute;
-  border: none;
-  font-size: 2rem;
-  line-height: 2rem;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
+  right: 2.25rem;
   text-align: center;
+  top: 3.5rem;
+  width: 2rem;
   z-index: 2;
 
   @media screen and (max-width: $breakpoint) {
