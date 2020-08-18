@@ -13,11 +13,11 @@
   @extend .anim-fade-in-and-condense;
   @extend .anim-delay-1;
 
-  font-size: 6rem;
+  font-size: 8rem;
   font-weight: bold;
   line-height: 1.2em;
   margin: 2rem 0;
-  max-width: 40rem;
+  max-width: 55rem;
   transition: font-size 0.5s;
   word-spacing: 100vw;
 
@@ -34,8 +34,8 @@
   @extend .anim-fade-in;
   @extend .anim-delay-1;
 
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.8em;
   margin-bottom: 3rem;
-  max-width: 40rem;
+  max-width: 55rem;
 }
