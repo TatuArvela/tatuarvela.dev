@@ -13,12 +13,12 @@
   @extend .anim-fade-in-and-condense;
   @extend .anim-delay-1;
 
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: bold;
   line-height: 1.2em;
   margin: 2rem 0;
   max-width: 55rem;
-  transition: font-size 0.5s;
+  transition: font-size 0.3s ease-out;
   word-spacing: 100vw;
 
   @media screen and (max-width: $breakpoint) {
