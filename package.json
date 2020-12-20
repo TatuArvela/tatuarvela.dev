@@ -1,8 +1,8 @@
 {
   "name": "tatuarvela.com",
+  "author": "Tatu Arvela",
   "version": "1.0.0",
   "description": "Development tools package",
-  "main": "index.js",
   "scripts": {
     "install": "bundle",
     "start": "bundle exec jekyll serve",
@@ -10,18 +10,8 @@
     "prettier": "prettier --write --list-different -- ./_data/*.json ./**/*.html",
     "markdownlint": "markdownlint --fix ./*.md"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TatuArvela/tatuarvela.com.git"
-  },
-  "author": "Tatu Arvela",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TatuArvela/tatuarvela.com/issues"
-  },
-  "homepage": "https://github.com/TatuArvela/tatuarvela.com#readme",
   "devDependencies": {
-    "markdownlint-cli": "^0.22.0",
+    "markdownlint-cli": "^0.26.0",
     "prettier": "^2.0.5",
     "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",
