@@ -1,6 +1,6 @@
-# tatuarvela.com
+# tatuarvela.dev
 
-[tatuarvela.com](https://tatuarvela.com)
+[tatuarvela.dev](https://tatuarvela.dev)
 
 This is the repository for my personal website.
 
