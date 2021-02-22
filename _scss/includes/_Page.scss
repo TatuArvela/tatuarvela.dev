@@ -6,6 +6,7 @@
   min-height: calc(100vh - 6rem);
   overflow: hidden;
   padding: 3rem 2rem;
+  contain: content;
 
   @media screen and (max-width: $breakpoint-tiny) {
     padding: 3rem 1rem;
