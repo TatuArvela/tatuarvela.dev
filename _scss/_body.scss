@@ -1,6 +1,8 @@
 body {
-  background-color: $body-background-color;
   background-image: $body-background-image;
   color: $body-color;
+  height: 100vh;
   margin: 0;
+  overflow: hidden;
+  width: 100vw;
 }

@@ -7,6 +7,7 @@
   margin-right: 2.5rem;
   opacity: 0;
   pointer-events: none;
+  position: relative;
   transform: translateX(5rem);
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   will-change: opacity;
@@ -27,6 +28,7 @@
   opacity: 0;
   overflow: visible;
   pointer-events: none;
+  position: relative;
   transition: opacity 0.4s ease-out, height 0.4s ease-out, padding 0.4s ease-out;
   will-change: opacity, height, padding;
 

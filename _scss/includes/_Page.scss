@@ -1,12 +1,17 @@
 /** @define Page */
 
 .Page {
+  @extend .Scrollbar;
+  box-sizing: border-box;
+  contain: content;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 6rem);
-  overflow: hidden;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 3rem 2rem;
-  contain: content;
+  width: 100%;
 
   @media screen and (max-width: $breakpoint-tiny) {
     padding: 3rem 1rem;

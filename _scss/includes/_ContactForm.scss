@@ -9,6 +9,7 @@
 $form-height: 594px;
 
 .ContactForm {
+  @extend .Scrollbar;
   align-items: center;
   animation: eliminate-fade 0s 0.3s 1 forwards;
   backdrop-filter: blur(1rem);
