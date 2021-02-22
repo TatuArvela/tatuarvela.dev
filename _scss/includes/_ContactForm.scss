@@ -13,6 +13,7 @@ $form-height: 594px;
   animation: eliminate-fade 0s 0.3s 1 forwards;
   backdrop-filter: blur(1rem);
   bottom: 0;
+  contain: strict;
   display: block;
   left: 0;
   opacity: 0;
